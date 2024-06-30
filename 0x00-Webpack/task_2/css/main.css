@@ -1,0 +1,13 @@
+#count {
+  display: inline;
+  font-weight: bold;
+}
+
+#logo {
+  width: 200px;
+  height: 200px;
+  background-image: url("../assets/holberton-logo.jpg");
+  background-size: 200px 200px; /* Ensures the image fits the div */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image within the div */
+}
