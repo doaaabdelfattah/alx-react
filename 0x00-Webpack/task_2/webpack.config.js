@@ -8,30 +8,22 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
+    assetModuleFilename: 'images/[hash][ext][query]',
   },
   performance: {
-    maxAssetSize: 512000, // Increase the asset size limit to 500 KiB
-    maxEntrypointSize: 512000, // Increase the entry point size limit to 500 KiB
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]',
-            },
-          },
-          {
-            loader: 'image-webpack-loader',
-          },
-        ],
+        type: 'asset/resource',
       },
     ],
   },
