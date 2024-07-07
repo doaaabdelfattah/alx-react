@@ -15,7 +15,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react', 'es2015'],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
           },
         },
       },
@@ -28,6 +28,9 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+            }
           },
           {
             loader: 'image-webpack-loader',
@@ -48,8 +51,6 @@ module.exports = {
     }),
   ],
   devServer: {
-    // static: path.join(__dirname, 'dist'),
-    // compress: true,
     port: 3000,
     hot: true,
   },
