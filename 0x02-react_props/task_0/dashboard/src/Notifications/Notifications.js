@@ -7,18 +7,19 @@ function Notifications() {
   const handleClick = () => {
     console.log("Close button has been clicked");
   };
+  const style = {
+    background: "none",
+    border: "none",
+    position: "absolute",
+    right: "10px",
+    top: "12px",
+    cursor: "pointer"
+  }
   return (
     <div className="Notifications">
       <button
         aria-label="Close"
-        style={{
-          background: "none",
-          border: "none",
-          position: "absolute",
-          right: "10px",
-          top: "12px",
-          cursor: "pointer",
-        }}
+        style={style}
         onClick={handleClick}
       >
         <img src={closeIcon} alt="close-icon" />
