@@ -1,0 +1,23 @@
+.Notifications {
+  padding: 1em;
+  border: 2px dashed red;
+  top: 10px;
+  width: fit-content;
+}
+.menuItem {
+  text-align: right;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+[data-notification-type="default"] {
+  color: blue;
+}
+
+[data-notification-type="urgent"] {
+  color: red;
+}
