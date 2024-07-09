@@ -1,8 +1,9 @@
 .Notifications {
-  padding: 1em;
+  padding: 1em 3em;
   border: 2px dashed red;
-  top: 10px;
+  top: 60px;
   width: fit-content;
+  position: absolute;
 }
 .menuItem {
   text-align: right;
