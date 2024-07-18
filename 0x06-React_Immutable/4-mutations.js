@@ -1,6 +1,5 @@
 import { Map } from 'immutable';
 
-// Create an initial Map
 export const map = Map({
   1: 'Liam',
   2: 'Noah',
@@ -10,12 +9,6 @@ export const map = Map({
   6: 'Lucas',
 });
 
-// Create an object with the updates
-
-const updates = {
-  3: 'Benjamin',
-  5: 'Oliver'
-
-};
-// Create new obj with modified data
-export const map2 = map.merge(updates);
+export const map2 = map.withMutations((values) => {
+  values.set(2, 'Benjamin').set(4, 'Oliver');
+});
